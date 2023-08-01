@@ -1,28 +1,30 @@
-import './App.css';
-import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from "react-router-dom";
+
+import { BrowserRouter, Routes, Route, NavLink} from 'react-router-dom';
 //header
-import NavTabs from './components/NavTabs/NavTabs';
+// import NavTabs from './components/NavTabs/NavTabs';
 //pages
 import Home from './pages/Home';
 import Drinks from './pages/Drinks';
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-
-<Route path="/" element={<NavTabs/>} >
-  <Route index element={<Home/>}/>
-  <Route path="drinks" element={<Drinks/>}/>
-
-  </Route>
-  )
-)
 
 function App() {
  return (  
+     <BrowserRouter>
+     <header>
+      <nav>
+        <h1>GulpCo</h1>
+            <NavLink to ="/">Home</NavLink>
+           <NavLink to="drinks">Drinks</NavLink>
+      </nav>
+     </header>
      
-   
-   <RouterProvider router={router}/>
-  
+  <Routes>
+  <Route index element={<Home/>}/>
+  <Route path="drinks" element={<Drinks/>}/>
+</Routes>
+
+
+  </BrowserRouter>
    );
 }
 
