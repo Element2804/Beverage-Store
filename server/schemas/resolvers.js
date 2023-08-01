@@ -27,7 +27,7 @@ const resolvers = {
       return await Drink.find(params).populate('category');
     },
     // returns a single drink by its id
-    drinks: async (parent, { _id }) => {
+    drink: async (parent, { _id }) => {
       return await Drink.findById(_id).populate('category');
     },
     // return a single user by its id
