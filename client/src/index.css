@@ -12,11 +12,6 @@
   margin: 50px;
 }
 
-.slick-list {
-  display: flex;
-  justify-content: space-between;
-}
-
 header nav {
   display: flex;
   gap: 16px;

@@ -9,19 +9,34 @@ export default class SimpleSlider extends Component {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 4,
+      slidesToShow: 5,
       slidesToScroll: 1,
-      variableWidth: false
     };
     return (
       <div>
         <h1>Featured Drinks</h1>
         <Slider {...settings}>
-            <div id="item"></div>
-            <div id="item"></div>
-            <div id="item"></div>
-            <div id="item"></div>
-            <div id="item"></div>
+            <div>
+                <div id="item"></div>
+            </div>
+            <div>
+                <div id="item"></div>
+            </div>
+            <div>
+                <div id="item"></div>
+            </div>
+            <div>
+                <div id="item"></div>
+            </div>
+            <div>
+                <div id="item"></div>
+            </div>
+            <div>
+                <div id="item"></div>
+            </div>
+            <div>
+                <div id="item"></div>
+            </div>
         </Slider>
       </div>
     );
