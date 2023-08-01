@@ -3,6 +3,20 @@
   --secondary: green;
 }
 
+#item {
+  height: 250px;
+  width: 250px;
+  background-color: red;
+  border-radius: 15px;
+  border: 5px solid black;
+  margin: 50px;
+}
+
+.slick-list {
+  display: flex;
+  justify-content: space-between;
+}
+
 header nav {
   display: flex;
   gap: 16px;
