@@ -74,7 +74,7 @@ const resolvers = {
         line_items.push({
           price_data: {
             currency: 'usd',
-            drink_data: {
+            product_data: {
               name: drink.name,
               description: drink.description,
               images: [`${url}/images/${drink.image}`]
