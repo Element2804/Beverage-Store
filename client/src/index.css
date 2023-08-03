@@ -12,6 +12,21 @@
   margin: 50px;
 }
 
+.Modal {
+  background-color: rgb(255, 255, 255);
+  height: 75%;
+  width: 50%;
+  border: solid 5px black;
+  border-radius: 15px;
+  position: fixed;
+  top: 13%;
+  left: 25%;
+}
+
+.Overlay {
+  background-color: black;
+}
+
 header nav {
   display: flex;
   gap: 16px;
