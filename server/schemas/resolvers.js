@@ -10,7 +10,7 @@ const resolvers = {
       return await Category.find();
     },
     // return all Products
-    Products: async (parent, { category, name }) => {
+    products: async (parent, { category, name }) => {
       const params = {};
 
     // if category exists, set params.category to category
@@ -27,7 +27,7 @@ const resolvers = {
       return await Product.find(params).populate('category');
     },
     // returns a single Product by its id
-    Product: async (parent, { _id }) => {
+    product: async (parent, { _id }) => {
       return await Product.findById(_id).populate('category');
     },
     // return a single user by its id
@@ -35,7 +35,7 @@ const resolvers = {
         // if user exists, return the user
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.Products',
+          path: 'orders.products',
           populate: 'category'
         });
 
@@ -52,7 +52,7 @@ const resolvers = {
         // if user exists, return the user
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.Products',
+          path: 'orders.products',
           populate: 'category'
         });
 
@@ -65,23 +65,23 @@ const resolvers = {
     // get checkout session
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
-      await new Order({ Products: args.Products });
+      await new Order({ products: args.products });
       // eslint-disable-next-line camelcase
       const line_items = [];
 
       // eslint-disable-next-line no-restricted-syntax
-      for (const Product of args.Products) {
+      for (const product of args.products) {
         line_items.push({
           price_data: {
             currency: 'usd',
             product_data: {
-              name: Product.name,
-              description: Product.description,
-              images: [`${url}/images/${Product.image}`]
+              name: product.name,
+              description: product.description,
+              images: [`${url}/images/${product.image}`]
             },
-            unit_amount: Product.price
+            unit_amount: product.price
           },
-          quantity: Product.purchaseQuantity,
+          quantity: product.purchaseQuantity,
         });
       }
 
