@@ -35,7 +35,7 @@ const resolvers = {
         // if user exists, return the user
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.Products',
+          path: 'orders.products',
           populate: 'category'
         });
 
@@ -52,7 +52,7 @@ const resolvers = {
         // if user exists, return the user
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.Products',
+          path: 'orders.products',
           populate: 'category'
         });
 
