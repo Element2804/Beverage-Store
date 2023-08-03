@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Drink, Category, Order } = require('../models');
+const { User, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -9,37 +9,37 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
-    // return all drinks
-    drinks: async (parent, { category, name }) => {
+    // return all Products
+    Products: async (parent, { category, name }) => {
       const params = {};
 
     // if category exists, set params.category to category
       if (category) {
         params.category = category;
       }
-      // if name includes the name of the drink, return the drink
+      // if name includes the name of the Product, return the Product
       if (name) {
         params.name = {
           $regex: name
         };
       }
 
-      return await Drink.find(params).populate('category');
+      return await Product.find(params).populate('category');
     },
-    // returns a single drink by its id
-    drink: async (parent, { _id }) => {
-      return await Drink.findById(_id).populate('category');
+    // returns a single Product by its id
+    Product: async (parent, { _id }) => {
+      return await Product.findById(_id).populate('category');
     },
     // return a single user by its id
     user: async (parent, args, context) => {
         // if user exists, return the user
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.drinks',
+          path: 'orders.Products',
           populate: 'category'
         });
 
-        // sort drinks in descending order by purchaseDate
+        // sort Products in descending order by purchaseDate
         user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
 
         return user;
@@ -52,7 +52,7 @@ const resolvers = {
         // if user exists, return the user
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.drinks',
+          path: 'orders.Products',
           populate: 'category'
         });
 
@@ -65,23 +65,23 @@ const resolvers = {
     // get checkout session
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
-      await new Order({ drinks: args.drinks });
+      await new Order({ Products: args.Products });
       // eslint-disable-next-line camelcase
       const line_items = [];
 
       // eslint-disable-next-line no-restricted-syntax
-      for (const drink of args.drinks) {
+      for (const Product of args.Products) {
         line_items.push({
           price_data: {
             currency: 'usd',
             product_data: {
-              name: drink.name,
-              description: drink.description,
-              images: [`${url}/images/${drink.image}`]
+              name: Product.name,
+              description: Product.description,
+              images: [`${url}/images/${Product.image}`]
             },
-            unit_amount: drink.price
+            unit_amount: Product.price
           },
-          quantity: drink.purchaseQuantity,
+          quantity: Product.purchaseQuantity,
         });
       }
 
@@ -105,10 +105,10 @@ const resolvers = {
       return { token, user };
     },
     // add order to user
-    addOrder: async (parent, { drinks }, context) => {
+    addOrder: async (parent, { Products }, context) => {
       console.log(context);
       if (context.user) {
-        const order = new Order({ drinks });
+        const order = new Order({ Products });
 
         await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
 
@@ -125,11 +125,11 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
-    // update drink info
-    updateDrink: async (parent, { _id, quantity }) => {
+    // update Product info
+    updateProduct: async (parent, { _id, quantity }) => {
       const decrement = Math.abs(quantity) * -1;
 
-      return await Drink.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+      return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
     },
     // login user
     login: async (parent, { email, password }) => {

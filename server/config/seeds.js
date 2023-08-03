@@ -1,5 +1,5 @@
 const db = require('./connection');
-const { User, Drink, Category } = require('../models');
+const { User, Product, Category } = require('../models');
 
 db.once('open', async () => {
   await Category.deleteMany();
@@ -12,9 +12,9 @@ db.once('open', async () => {
 
   console.log('categories seeded');
 
-  await Drink.deleteMany();
+  await Product.deleteMany();
 
-  const drinks = await Drink.insertMany([
+  const products = await Product.insertMany([
     {
       name: 'De Mi Pais Mango Juice 16.9 OZ/ 24',
       description: 'Mango Juice Drink with Pulp.',
@@ -184,7 +184,7 @@ db.once('open', async () => {
     password: 'password12345',
     orders: [
       {
-        drinks: [drinks[0]._id, drinks[0]._id, drinks[1]._id]
+        products: [products[0]._id, products[0]._id, products[1]._id]
       }
     ]
   });
