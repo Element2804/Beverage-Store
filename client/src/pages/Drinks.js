@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CategoryMenu from "../components/CategoryMenu";
 import ProductList from "../components/ProductList";
+import Cart from "../components/Cart";
 
 export default class SimpleSlider extends Component {
   constructor() {
@@ -46,6 +47,7 @@ export default class SimpleSlider extends Component {
         </Slider>
         <CategoryMenu />
         <ProductList />
+        <Cart />
       </div>
     );
   }
