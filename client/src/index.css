@@ -31,14 +31,14 @@ header nav {
   display: flex;
   gap: 16px;
   justify-content: end;
- }
+}
 
 header nav h1 {
   font-size: 25px;
   margin-right: auto;
-  }
+}
 
-header nav a{
+header nav a {
   font-size: 20px;
   text-decoration: none;
   padding: 8px;
@@ -47,4 +47,24 @@ header nav a{
 
 header nav a.active {
   background: var(--primary);
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.px-1 {
+  padding-right: var(--spacing-one);
+  padding-left: var(--spacing-one);
+}
+
+.py-1 {
+  padding-top: var(--spacing-one);
+  padding-bottom: var(--spacing-one);
+}
+
+.card {
+  width: 25%;
+  text-align: center;
 }
