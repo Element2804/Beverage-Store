@@ -17,7 +17,6 @@ import { setContext } from "@apollo/client/link/context";
 //header
 // import NavTabs from './components/NavTabs/NavTabs';
 //pages
-import Home from "./pages/Home";
 import Drinks from "./pages/Drinks";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -37,7 +36,6 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
-//glenn
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
@@ -51,7 +49,6 @@ function App() {
           <header>
             <nav>
               <h1>GulpCo</h1>
-              <NavLink to="/">Home</NavLink>
               <NavLink to="drinks">Drinks</NavLink>
               <NavLink to="login">Login</NavLink>
               <NavLink to="signup">Signup</NavLink>
@@ -59,7 +56,7 @@ function App() {
           </header>
 
           <Routes>
-            <Route index element={<Home />} />
+            <Route index element={<Drinks />} />
             <Route path="drinks" element={<Drinks />} />
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
