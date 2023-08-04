@@ -66,7 +66,7 @@ const resolvers = {
             product_data: {
               name: product.name,
               description: product.description,
-              images: [`${url}/${product.image}`],
+              images: [`${url}/images/${product.image}`],
             },
             unit_amount: product.price * 100,
           },
@@ -79,7 +79,7 @@ const resolvers = {
         line_items,
         mode: "payment",
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${url}/`,
+        cancel_url: `${url}/drinks`,
       });
 
       return { session: session.id };
