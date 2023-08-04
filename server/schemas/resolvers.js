@@ -99,16 +99,16 @@ const resolvers = {
   Mutation: {
     // create a new user
     addUser: async (parent, args) => {
-      const user = await User.create(args);
+      const user = await User.create(args); // create a new user using the args specified in the mutation
       const token = signToken(user);
 
       return { token, user };
     },
     // add order to user
-    addOrder: async (parent, { Products }, context) => {
+    addOrder: async (parent, { products }, context) => {
       console.log(context);
       if (context.user) {
-        const order = new Order({ Products });
+        const order = new Order({ products });
 
         await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
 
