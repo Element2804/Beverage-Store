@@ -21,6 +21,7 @@ import Drinks from "./pages/Drinks";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import { StoreProvider } from "./utils/GlobalState";
+import Nav from "./components/Nav";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -47,12 +48,7 @@ function App() {
       <Router>
         <StoreProvider>
           <header>
-            <nav>
-              <h1>GulpCo</h1>
-              <NavLink to="drinks">Drinks</NavLink>
-              <NavLink to="login">Login</NavLink>
-              <NavLink to="signup">Signup</NavLink>
-            </nav>
+            <Nav />
           </header>
 
           <Routes>
