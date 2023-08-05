@@ -74,7 +74,11 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="close" onClick={toggleCart}>
-        [close]
+        <img
+          src="./images/cancel.png"
+          alt="close"
+          style={{ width: 30, height: 30 }}
+        />
       </div>
       <h2>Shopping Cart</h2>
       {state.cart.length ? (
@@ -88,7 +92,9 @@ const Cart = () => {
 
             {/* Check to see if the user is logged in. If so render a button to check out */}
             {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+              <button class="checkout-button" onClick={submitCheckout}>
+                Checkout
+              </button>
             ) : (
               <span>(log in to check out)</span>
             )}
