@@ -85,6 +85,7 @@ function Detail() {
     <>
       {currentProduct && cart ? (
         <div className="container my-1">
+          <Cart />
           <Link to="/">← Back to Drinks</Link>
 
           <h2>{currentProduct.name}</h2>
@@ -106,7 +107,6 @@ function Detail() {
         </div>
       ) : null}
       {loading ? <img src={DoubleRing} alt="loading" /> : null}
-      <Cart />
     </>
   );
 }
