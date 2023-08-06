@@ -10,13 +10,13 @@ import {
 import { setContext } from "@apollo/client/link/context";
 
 //header
-// import NavTabs from './components/NavTabs/NavTabs';
+import Nav from "./components/Nav";
+
 //pages
 import Drinks from "./pages/Drinks";
-import Login from "./pages/Login";
+import Login from "./pages/Login.js";
 import Signup from "./pages/Signup";
 import { StoreProvider } from "./utils/GlobalState";
-import Nav from "./components/Nav";
 import OrderHistory from "./pages/OrderHistory";
 import Detail from "./pages/Detail";
 import Success from "./pages/Success";

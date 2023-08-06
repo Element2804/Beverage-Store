@@ -1,16 +1,19 @@
+/* Global Styles */
 :root {
   --primary: #f75c27;
   --secondary: #333;
+  --spacing-one: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#item {
-  height: 250px;
-  width: 250px;
-  background-color: var(--primary);
-  border-radius: 15px;
-  border: 5px solid var(--secondary);
-  margin: 50px;
+/* Layout Styles */
+.container {
+  max-width: 400px;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
 .Modal {
@@ -32,16 +35,15 @@ header {
   padding: 10px;
   background-color: var(--secondary);
   display: flex;
-  justify-content: space-between; /* Align logo to the left and navigation to the right */
-  align-items: center; /* Vertically center the items */
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Style the logo image */
 header img {
   margin-right: 10px;
 }
 
-/* Style the links in the navbar */
+/* Navbar Styles */
 nav ul {
   list-style: none;
   display: flex;
@@ -65,21 +67,25 @@ nav a:hover {
   color: var(--primary);
 }
 
-/* Add a little space between the logo and the links */
 h1 {
   display: flex;
   align-items: center;
-  margin-right: auto; /* This will push the logo to the right side */
+  margin-right: auto;
 }
 
-/* Align navigation links to the right */
 nav {
-  margin-left: auto; /* This will align the navigation links to the right side */
+  margin-left: auto;
 }
 
+/* Utility Classes */
 .flex-row {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-end {
+  justify-content: flex-end;
 }
 
 .py-1 {
@@ -87,35 +93,36 @@ nav {
   padding-bottom: var(--spacing-one);
 }
 
+/* Card and Buttons Styles */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .card {
   width: 25%;
   text-align: center;
 }
 
-.addToCartBtn {
+.addToCartBtn,
+.categoryBtn {
   background-color: rgb(228, 84, 7);
   color: white;
   border-radius: 4px;
-  margin-bottom: 10px;
   padding: 4px 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
+  margin: 5px;
 }
 
 .categoryBtn {
   background-color: rgb(228, 40, 7);
-  color: white;
-  border-radius: 4px;
-  margin: 5px;
-  padding: 4px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 18px;
 }
 
+/* Responsive Styles */
 @media only screen and (max-width: 600px) {
   .flex-row {
     display: flex;
