@@ -105,7 +105,7 @@ const Cart = () => {
           <span role="img" aria-label="shocked">
             ⚠️
           </span>
-          You haven't added anything to your cart yet!
+          Cart is Empty!
         </h3>
       )}
     </div>
