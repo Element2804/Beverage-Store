@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  NavLink,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import {
   ApolloClient,
@@ -22,6 +17,9 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import { StoreProvider } from "./utils/GlobalState";
 import Nav from "./components/Nav";
+import OrderHistory from "./pages/OrderHistory";
+import Detail from "./pages/Detail";
+import Success from "./pages/Success";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -56,6 +54,9 @@ function App() {
             <Route path="drinks" element={<Drinks />} />
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
+            <Route path="orderhistory" element={<OrderHistory />} />
+            <Route path="success" element={<Success />} />
+            <Route path="/products/:id" element={<Detail />} />
           </Routes>
         </StoreProvider>
       </Router>

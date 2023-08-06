@@ -103,3 +103,15 @@ nav {
   display: inline-block;
   font-size: 15px;
 }
+
+.categoryBtn {
+  background-color: rgb(228, 40, 7);
+  color: white;
+  border-radius: 4px;
+  margin: 5px;
+  padding: 4px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}
