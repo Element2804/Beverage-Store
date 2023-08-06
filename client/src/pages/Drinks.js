@@ -36,7 +36,8 @@ export default class SimpleSlider extends Component {
     };
     return (
       <div>
-        <h1>Featured Drinks</h1>
+        <Cart />
+        <h1 class="featured">Featured Drinks</h1>
         <Slider {...settings}>
           <Modal />
           <Modal />
@@ -47,7 +48,6 @@ export default class SimpleSlider extends Component {
         </Slider>
         <CategoryMenu />
         <ProductList />
-        <Cart />
       </div>
     );
   }

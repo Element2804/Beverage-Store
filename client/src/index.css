@@ -115,3 +115,25 @@ nav {
   display: inline-block;
   font-size: 18px;
 }
+
+@media only screen and (max-width: 600px) {
+  .flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 100%;
+    text-align: center;
+  }
+  div.slick-slider {
+    display: none;
+  }
+  .featured {
+    display: none;
+  }
+  nav {
+    margin-left: inherit;
+  }
+}
