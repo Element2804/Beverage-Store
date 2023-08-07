@@ -75,7 +75,7 @@ const Cart = () => {
     <div className="cart">
       <div className="close" onClick={toggleCart}>
         <img
-          src="./images/cancel.png"
+          src="/images/cancel.png"
           alt="close"
           style={{ width: 30, height: 30 }}
         />

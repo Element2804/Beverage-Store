@@ -12,10 +12,12 @@ function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
 
 //
-const [isClick, setIsClick] = useState(true);
+const [isClick, setIsClick] = useState(false);
+
+const [buttonClickId, setButtonClickId] = useState(null);
 
 const toggleColor = () => {
-  setIsClick(!isClick); 
+  setIsClick(true); 
   console.log("test")
 };
 
@@ -55,13 +57,14 @@ const toggleColor = () => {
       {categories.map((item) => (
         <button
         style={{
-          backgroundColor: isClick ? "#f75c27" : "#f7c427",
+          backgroundColor: isClick && buttonClickId == item._id ? "#f75c27" : "#f7c427",
         }}
-          class="categoryBtn"
+          className="categoryBtn"
           key={item._id}
           onClick={() => {
+            setButtonClickId(item._id);
             handleClick(item._id);
-            toggleColor()
+            toggleColor();
 
           }}
         >
