@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* Global Styles */
 :root {
-  --primary: #f75c27;
+   --primary: #f75c27;
   --secondary: #333;
   --spacing-one: 10px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Roboto";
+  background-color: #EADBC8;
 }
 
 /* Layout Styles */
@@ -32,6 +35,7 @@
 }
 
 header {
+  border-radius: 10px;
   padding: 10px;
   background-color: var(--secondary);
   display: flex;
@@ -76,9 +80,23 @@ h1 {
 nav {
   margin-left: auto;
 }
+/* Product Page */
+.product-box a{
+  color: var(--secondary)
+}
+.product-box img{
+  transition: 1s ease;
+}
+  .product-box img:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+  }
 
 /* Utility Classes */
 .flex-row {
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -93,10 +111,57 @@ nav {
   padding-bottom: var(--spacing-one);
 }
 
+/* Sign up/Login pages*/
+.signup-login {
+  height: auto;
+  max-width: 400px;
+  margin: 5% auto;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  background-color: #fff;
+}
+
+.signup-login h2{
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.signup-login input  {
+  font-size: 17px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+ padding:  15px;
+ margin: 2px;
+ outline: none;
+}
+
+.signup-login input:focus{
+  box-shadow: 0 1px 0 rgba(0,0,0,0.3);
+}
+ .signup-login button {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 20px;
+  background-color: var(--primary);
+  border: none;
+ }
+ .signup-login button:hover{
+  border: 1px black solid;  
+   }
+
 /* Card and Buttons Styles */
 .flex-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+
 }
 
 .card {
@@ -116,10 +181,19 @@ nav {
   font-size: 15px;
   margin: 5px;
 }
+.category-box  {
+
+  color: var(--secondary)
+}
 
 .categoryBtn {
   background-color: rgb(228, 40, 7);
   font-size: 18px;
+}
+
+.product-box {
+  
+  color: var(--secondary)
 }
 
 /* Responsive Styles */
