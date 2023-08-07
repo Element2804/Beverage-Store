@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import { useStoreContext } from "../../utils/GlobalState";
 import {
@@ -10,6 +10,14 @@ import { idbPromise } from "../../utils/helpers";
 
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
+
+//
+const [isClick, setIsClick] = useState(true);
+
+const toggleColor = () => {
+  setIsClick(!isClick); 
+  console.log("test")
+};
 
   const { categories } = state;
 
@@ -42,18 +50,24 @@ function CategoryMenu() {
   };
 
   return (
-    <div>
+    <div className="category-box">
       <h2>Choose a Category:</h2>
       {categories.map((item) => (
         <button
+        style={{
+          backgroundColor: isClick ? "#f75c27" : "#f7c427",
+        }}
           class="categoryBtn"
           key={item._id}
           onClick={() => {
             handleClick(item._id);
+            toggleColor()
+
           }}
         >
           {item.name}
         </button>
+        
       ))}
     </div>
   );
