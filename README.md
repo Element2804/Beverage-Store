@@ -4,11 +4,9 @@ Explore a Universe of Revitalizing Beverages
 
 ## User Story
 
-As a user who enjoys exploring and trying new beverages, I want to use the GulpCo website to discover a wide range of refreshing drinks from around the world. The website should provide a user-friendly experience that allows me to easily browse, learn about, and even purchase various types of drinks.
-
+As a user who enjoys exploring and trying new beverages, I want to use the GulpCo website to discover a wide range of refreshing drinks from around the world. The website should provide a user-friendly experience that allows me to easily browse, learn about, and purchase various types of drinks.
 
 ## Acceptance Criteria
-
 
 Browse Drink Categories:
 
@@ -55,12 +53,10 @@ Responsive Design:
 * Express.js as the server framework
 * MongoDB for the database
 * Apollo Client for handling GraphQL queries and mutations
-* Responsive design for optimal viewing on various devices
 
 ## Developers
 
 This project was created by William (AJ) Faries, Glenn Gabriel, Jose Rodriguez, Anurag Mishra, and Dennis Medrano
-
 
 ## License
 
