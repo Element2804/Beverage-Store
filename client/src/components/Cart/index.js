@@ -77,7 +77,7 @@ const Cart = () => {
         <img
           src="/images/cancel.png"
           alt="close"
-          style={{ width: 30, height: 30 }}
+          style={{ width: 25, height: 25 }}
         />
       </div>
       <h2>Shopping Cart</h2>
