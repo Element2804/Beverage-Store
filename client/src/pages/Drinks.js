@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Slider from "react-slick";
-import Modal from "./modals";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CategoryMenu from "../components/CategoryMenu";
@@ -37,15 +35,6 @@ export default class SimpleSlider extends Component {
     return (
       <div>
         <Cart />
-        <h1 class="featured">Featured Drinks</h1>
-        <Slider {...settings}>
-          <Modal />
-          <Modal />
-          <Modal />
-          <Modal />
-          <Modal />
-          <Modal />
-        </Slider>
         <CategoryMenu />
         <ProductList />
       </div>

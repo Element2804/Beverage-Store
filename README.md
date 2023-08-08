@@ -1,63 +1,50 @@
-# Gulpco
+<div>
+<img src=".//client/images/GulpCo.jpg">
+</div>
 
 Explore a Universe of Revitalizing Beverages
 
-## User Story
+## Overview
 
-As a user who enjoys exploring and trying new beverages, I want to use the GulpCo website to discover a wide range of refreshing drinks from around the world. The website should provide a user-friendly experience that allows me to easily browse, learn about, and purchase various types of drinks.
+Our goal was to create an application that allows a user to discover a wide range of Spanish beverages. GulpCo provides a user friendly interface for you to browse drinks, add them to your cart and ultimately checkout using Stripe to process payment. The user is also able to create an account and access their order history.
 
-## Acceptance Criteria
+## Table of Contents
 
-Browse Drink Categories:
+- [Development Team](#development-team)
+- [Technologies Used](#technologies-used)
+- [Introduction](#introduction)
+- [License](#license)
 
-* As a user, I can navigate through different categories of drinks, such as soft drinks, juices, and teas.
-* Each category should have clear labels and appealing images that give me an idea of what to expect.
+## Development Team
 
-Detailed Drink Information:
+- [Glenn Gabriel](https://github.com/gmgabrie)
+- [William (AJ) Faries](https://github.com/Element2804)
+- [Jose Rodriguez](https://github.com/josejrod07)
+- [Anurag Mishra](https://github.com/AnuragM2023)
+- [Dennis Medrano](https://github.com/Dennmed22)
 
-* When I click on a drink, I should be able to view detailed information about it, including its name, description, ingredients, flavor profile, and origin.
-* High-quality images of the drink should be displayed to give me a visual representation of what I can expect.
 
-User Accounts:
+## Introduction
+<h2>Welcome To GulpCo</h2>
 
-* I should be able to create a user account on the website to save my preferences, reviews, and favorite drinks.
-* The account dashboard should provide an overview of my activity, including past orders and saved items.
+Follow this link to get started :  https://gulpco-9498db2ffc8b.herokuapp.com/
 
-Shopping Cart and Purchasing:
+![e1e688ac-b90d-4410-8ed1-7dd5a044adc4](https://github.com/josejrod07/ecommerce-project3/assets/103654389/0298ba81-1c10-4595-8daa-1200d4f34ad6)
 
-* If I find a drink I'm interested in purchasing, I should be able to add it to my shopping cart.
-* The website should display the total cost of the items in my cart and provide a seamless checkout process.
 
-Responsive Design:
 
-* The website should be responsive and accessible across various devices, including desktops, tablets, and smartphones.
-* The layout and images should adapt to different screen sizes for optimal user experience.
-
-## Installation
-
-1. Clone this repository to your local machine using git clone https://github.com/yourusername/.git
-
-2. Navigate to the project directory:
-
-3. Install the required dependencies: npm install
-
-4. Start the development server: npm start
-
-5. Open your web browser and visit http://localhost:3000 to access the website.
 
 ## Technologies Used
 
-* HTML5, CSS3, JavaScript
-* React.js for building the frontend
-* Node.js for the backend
-* Express.js as the server framework
-* MongoDB for the database
-* Apollo Client for handling GraphQL queries and mutations
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+- ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
+- ![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
+- ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+- ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+- ![Apollo-GraphQL](https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql)
 
-## Developers
 
-This project was created by William (AJ) Faries, Glenn Gabriel, Jose Rodriguez, Anurag Mishra, and Dennis Medrano
 
 ## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+This application is covered by the  <br>
+[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)

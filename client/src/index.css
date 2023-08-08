@@ -185,6 +185,10 @@ nav {
 
   color: var(--secondary)
 }
+.category-box h2{
+  font-size: 30px;
+}
+  
 
 .categoryBtn {
   background-color: rgb(228, 40, 7);
