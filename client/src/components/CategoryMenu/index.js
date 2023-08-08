@@ -11,15 +11,13 @@ import { idbPromise } from "../../utils/helpers";
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
 
-//
+// states for button color
 const [isClick, setIsClick] = useState(false);
-
 const [buttonClickId, setButtonClickId] = useState(null);
-
+// swaps button colors
 const toggleColor = () => {
   setIsClick(true); 
-  console.log("test")
-};
+  };
 
   const { categories } = state;
 
@@ -57,7 +55,7 @@ const toggleColor = () => {
       {categories.map((item) => (
         <button
         style={{
-          backgroundColor: isClick && buttonClickId == item._id ? "#f75c27" : "#f7c427",
+          backgroundColor: isClick && buttonClickId === item._id ? "#252B48" : "#f75c27",
         }}
           className="categoryBtn"
           key={item._id}
