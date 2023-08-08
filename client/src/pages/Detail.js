@@ -66,7 +66,13 @@ function Detail() {
     } else {
       dispatch({
         type: ADD_TO_CART,
-        product: { ...currentProduct, purchaseQuantity: 1 },
+        product: {
+          _id: currentProduct._id,
+          image: currentProduct.image,
+          price: currentProduct.price,
+          name: currentProduct.name,
+          purchaseQuantity: 1,
+        },
       });
       idbPromise("cart", "put", { ...currentProduct, purchaseQuantity: 1 });
     }

@@ -54,6 +54,7 @@ const Cart = () => {
   // When the submit checkout method is invoked, loop through each item in the cart
   // Add each item id to the productIds array and then invoke the getCheckout query passing an object containing the id for all our products
   function submitCheckout() {
+    console.log(state.cart);
     getCheckout({
       variables: {
         products: [...state.cart],
@@ -75,9 +76,9 @@ const Cart = () => {
     <div className="cart">
       <div className="close" onClick={toggleCart}>
         <img
-          src="./images/cancel.png"
+          src="/images/cancel.png"
           alt="close"
-          style={{ width: 30, height: 30 }}
+          style={{ width: 25, height: 25 }}
         />
       </div>
       <h2>Shopping Cart</h2>
