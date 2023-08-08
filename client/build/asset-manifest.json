@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8566f112.css",
+    "main.js": "/static/js/main.3933d0a6.js",
+    "static/media/DoubleRing.gif": "/static/media/DoubleRing.5dbc333ced59b1fec0d2.gif",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.8566f112.css.map": "/static/css/main.8566f112.css.map",
+    "main.3933d0a6.js.map": "/static/js/main.3933d0a6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8566f112.css",
+    "static/js/main.3933d0a6.js"
+  ]
+}
