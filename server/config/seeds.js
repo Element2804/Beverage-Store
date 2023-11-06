@@ -20,7 +20,7 @@ db.once("open", async () => {
       description: "Mango Juice Drink with Pulp.",
       image: "./images/MangoJuice.jpg",
       category: categories[0]._id,
-      price: 32.40,
+      price: 32.25,
       quantity: 500,
     },
     {
@@ -28,7 +28,7 @@ db.once("open", async () => {
       description: "Soursop Juice Drink with Pulp.",
       image: "./images/SoursopJuice.jpg",
       category: categories[0]._id,
-      price: 32.40,
+      price: 32.25,
       quantity: 500,
     },
     {
@@ -36,7 +36,7 @@ db.once("open", async () => {
       description: "Guava Juice Drink with Pulp.",
       image: "./images/GuavaJuice.jpg",
       category: categories[0]._id,
-      price: 32.40,
+      price: 32.25,
       quantity: 500,
     },
     {
@@ -44,7 +44,7 @@ db.once("open", async () => {
       description: "Watermelon Juice Drink with Pulp.",
       image: "./images/WatermelonJuice.jpg",
       category: categories[0]._id,
-      price: 32.40,
+      price: 32.25,
       quantity: 500,
     },
     {
@@ -52,7 +52,7 @@ db.once("open", async () => {
       description: "Tamarind Juice Drink with Pulp.",
       image: "./images/TamarindJuice.jpg",
       category: categories[0]._id,
-      price: 32.40,
+      price: 32.25,
       quantity: 500,
     },
     {
@@ -60,7 +60,7 @@ db.once("open", async () => {
       description: "Strawberry Juice Drink with Pulp.",
       image: "./images/StrawberryJuice.jpg",
       category: categories[0]._id,
-      price: 32.40,
+      price: 32.25,
       quantity: 500,
     },
     {
@@ -68,7 +68,7 @@ db.once("open", async () => {
       description: "Orange Carrot Juice Drink with Pulp.",
       image: "./images/OrangeJuice.jpg",
       category: categories[0]._id,
-      price: 32.40,
+      price: 32.25,
       quantity: 500,
     },
     {
@@ -76,7 +76,7 @@ db.once("open", async () => {
       description: "Cantaloupe Pineapple Juice Drink with Pulp.",
       image: "./images/CantaloupeJuice.jpg",
       category: categories[0]._id,
-      price: 32.40,
+      price: 32.25,
       quantity: 500,
     },
     {
@@ -84,7 +84,7 @@ db.once("open", async () => {
       description: "Mamey Juice Drink with Pulp.",
       image: "./images/MameyJuice.jpg",
       category: categories[0]._id,
-      price: 32.40,
+      price: 32.25,
       quantity: 500,
     },
     {
