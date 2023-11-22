@@ -27,7 +27,7 @@ Our goal was to create an application that allows a user to discover a wide rang
 ## Introduction
 <h2>Welcome To GulpCo</h2>
 
-Follow this link to get started :  https://gulpco-9498db2ffc8b.herokuapp.com/
+Follow this link to get started :  https://gulpco-d64674e5b33a.herokuapp.com/
 
 ![e1e688ac-b90d-4410-8ed1-7dd5a044adc4](https://github.com/josejrod07/ecommerce-project3/assets/103654389/0298ba81-1c10-4595-8daa-1200d4f34ad6)
 
